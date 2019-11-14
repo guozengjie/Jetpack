@@ -1,11 +1,20 @@
 package club.guozengjie.jetpack
 
-import org.junit.After
-import org.junit.Before
-import org.junit.Test
+import org.junit.*
 
 class MainActivityTest {
-
+    companion object{
+        @BeforeClass
+        @JvmStatic
+        fun start(){
+            println("-------start------")
+        }
+        @AfterClass
+        @JvmStatic
+        fun end(){
+            println("-------end------")
+        }
+    }
     @Before
     fun setUp() {
         println("-------Before------")
